@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('css')
+    @livewireStyles
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -25,10 +29,18 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <div class="col-md-12">
+                        @livewire('client.main')
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+
+    @livewireScripts
 @endsection
